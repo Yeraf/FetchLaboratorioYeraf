@@ -1,5 +1,17 @@
 .img_picture {
     margin-left: 400px;
     border-radius: 40%;
-    
+}
+
+.nombre-name {
+   margin: -285px 0px 0 280px;
+   padding: 100px;
+}
+
+.mostrar-btn {
+    margin-left: 400px;
+}
+
+.table {
+    margin-top: 20px;
 }

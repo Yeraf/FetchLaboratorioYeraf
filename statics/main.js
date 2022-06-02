@@ -8,17 +8,34 @@ function mostrar() {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      
-      img = data.results[0].picture.medium;
+      name_web = data.results[0].name.first;
+      img = data.results[0].picture.large;
+
       boton = `
+        <h1 class="nombre-name display-4">${name_web}</h1>
         <img class="img_picture" src="${img}" alt="">
         `
-      miboton.innerHTML = boton;
+        miboton.innerHTML = boton;
     });
 }
 
+function tabla() {
+    let contenido_tabla = document.getElementById("contenido_tabla")
+    let misdatos ;
 
-// name_web = data.results[0].name.first;
-/* <h1 class="display-4">Mi Sitio Web : ${name_web}</h1> */
-
-
+    fetch('tabla.json')
+    .then(response => response.json())
+    .then(data => {
+       data.forEach(element => {
+           misdatos += `
+           <tr>
+                <td>${element.id}</td>
+                <td>${element.nombre}</td>
+                <td>${element.email}</td>
+                <td>${element.estado ? "Activo" : "Falso"}</td>
+            </tr>
+           `
+       }); 
+       contenido_tabla.innerHTML = misdatos;
+    })
+}

@@ -31,14 +31,14 @@
                 <h1 class="display-4">Mi Sitio Web : </h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo sint autem dolore! Soluta asperiores
                     voluptatum nam consequatur repudiandae cum veritatis, nemo distinctio voluptas accusamus facere sit
-                    illum laudantium aspernatur tempore.</p>
-                <p><a href="" class="btn btn-success btn-lg btn-inline" id="contenido" onclick="mostrar()">Mostrar
-                        Info</a></p>
-                    <div class="show_name">
-                        <!-- <img class="img_picture" src="img/users.png" alt=""> -->
-                    </div>
-            </div>
+                    illum laudantium aspernatur tempore.
+                </p>
+                <input type="button" class="btn btn-success btn-lg btn-inline" id="contenido" onclick="mostrar()"
+                    value="Mostrar Info">
+                <div class="" id="show_name">
 
+                </div>
+            </div>
         </div>
         <!--Seccion dos-->
 
@@ -67,10 +67,27 @@
                     <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
                 </div>
             </div>
+            <div class="" id="btn-tabla">
+                <input type="button" class="mostrar-btn btn btn-danger" value="Mostrar Tabla" onclick="tabla()">
+                <table class="table" id="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody id="contenido_tabla"> 
+                      
+                    </tbody>
+                  </table>
+            </div>
 
             <hr>
 
         </div> <!-- /container -->
+
         <footer class="container text-center mt-4">
             <p> &copy;; Estudiantes 2022</p>
 
