@@ -1,19 +1,24 @@
 function mostrar() {
-    let URL = "https://randomuser.me/api/";
-    let img;
-    let name_web;
-    let miboton = document.getElementById("info")
+  let url = "https://randomuser.me/api/";
+  let miboton = document.getElementById("show_name");
+  let img;
+  let boton;
+  let name_web;
 
-    fetch(URL)
-    .then((response) => response.json)
-    .then(data => {
-        name_web = data.results[0].name.first;
-        img = data.results[0].picture.medium;
-        boton = `
-        <h1 class="display-4">Mi Sitio Web : ${name_web}</h1>
-        
-        <img class="${img}" src="img/users.png" alt="">
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      
+      img = data.results[0].picture.medium;
+      boton = `
+        <img class="img_picture" src="${img}" alt="">
         `
-        miboton.innerHTML = boton;
+      miboton.innerHTML = boton;
     });
 }
+
+
+// name_web = data.results[0].name.first;
+/* <h1 class="display-4">Mi Sitio Web : ${name_web}</h1> */
+
+
